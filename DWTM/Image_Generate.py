@@ -95,4 +95,3 @@ class ImageGenerate(object):
 
 
 
-
