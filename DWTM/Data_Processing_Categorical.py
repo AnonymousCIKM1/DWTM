@@ -78,6 +78,7 @@ class Datapreprocessing(object):
     self.dff_list = self.dff.values.tolist()
     self.for_lastcol = pd.DataFrame(self.dataset) #for accesing last colum
     self.for_lastcol = list(self.for_lastcol)
+    self.dff.columns.values[len(self.dff.columns)-1] = 'Class'
     #self.dff.columns.values[len(self.dff.columns)-1] = 'Class'
     print(len(self.dff.columns))
     self.dff = list(self.dff)
@@ -174,5 +175,5 @@ class Datapreprocessing(object):
   def column_rename(self,csv_file):
     self.csv_frame = pd.read_csv(csv_file)
     self.csv_frame = pd.DataFrame(self.csv_frame)
-    self.csv_frame.columns.values[len(self.csv_frame.columns)-1] = 'Class'
+    self.csv_frame.columns.values[len(self.csv_frame.columns)-1] = 'class'
     self.csv_frame.to_csv('ProcessedDataset.csv')
