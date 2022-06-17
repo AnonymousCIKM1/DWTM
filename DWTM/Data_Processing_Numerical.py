@@ -76,7 +76,7 @@ class Datapreprocessing(object):
     self.dff_list = self.dff.values.tolist()
     self.for_lastcol = pd.DataFrame(self.dataset) #for accesing last colum
     self.for_lastcol = list(self.for_lastcol)
-    #self.dff.columns.values[len(self.dff.columns)-1] = 'Class'
+    self.dff.columns.values[len(self.dff.columns)-1] = 'Class'
     print(len(self.dff.columns))
     self.dff = list(self.dff)
     #print('--------------')
